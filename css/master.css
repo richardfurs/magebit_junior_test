@@ -1,0 +1,278 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/img/Background.png);
+  background-size: cover;
+  font-family: "Source Sans Pro";
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+
+                                          /* HEAD */
+.sign-up {
+  max-width: 280px;
+  width: 100%;
+}
+
+.login {
+  max-width: 280px;
+  width: 100%;
+}
+
+.invisible {
+  display: none;
+}
+
+.logo {
+  margin-left: auto;
+}
+
+.inside-logo {
+  display: flex;
+  font-size: 28px;
+  color: rgb(62, 73, 94);
+  line-height: 1.25;
+  font-weight: 300;
+  align-items: center;
+  position: relative;
+}
+
+.line-under {
+  background-color: rgb(73, 171, 254);
+  width: 40px;
+  height: 2px;
+  margin-top: 29px;
+}
+
+
+                                                  /* FORM */
+.form {
+  margin-top: 29px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 27px;
+}
+
+.form-label {
+  position: absolute;
+  left: 0;
+  color: rgb(132, 149, 183);
+  z-index: 1;
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+
+.asterisk {
+  color: red;
+}
+
+img {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  z-index: 1;
+}
+
+.focused .form-label {
+  font-size: 11px;
+  color: rgb(132, 149, 183);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-input {
+  position: relative;
+  height: 19px;
+  padding: 12px 0px 5px 0;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  box-shadow: 0 1px 0 0 #e5e5e5;
+}
+
+.button-form {
+  border-style: solid;
+  border: none;
+  background-color: rgb(248, 154, 53);
+  width: 140px;
+  height: 50px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: background-color 0.2s ease-out;
+  margin-top: 3px;
+}
+
+.button-form:focus {
+  outline: none;
+}
+
+.button-form:not(:focus):hover {
+  background-color: rgb(248, 191, 53);
+}
+
+
+                                                  /* BG RECTANGLE */
+.square {
+  position: absolute;
+  max-width: 460px;
+  width: 100%;
+  min-height: 460px;
+  background-color: white;
+  left: 20px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  display: flex;
+  margin: 0 auto;
+  max-width: 920px;
+  width: 100%;
+  min-height: 420px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.bg-left,
+.bg-right {
+  width: 50%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: rgba(15, 26, 47, 0.902);
+}
+
+.lorem-ipsum {
+  margin-bottom: 31px;
+  margin-top: 26px;
+  line-height: 1.75;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  width: 280px;
+}
+
+.account {
+  margin-top: 0;
+  margin-bottom: 26px;
+  border: none;
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  line-height: 1.25;
+  font-weight: lighter;
+}
+
+.bg-underline {
+  background-color: rgb(73, 171, 254);
+  width: 40px;
+  height: 2px;
+  margin-top: 0px;
+}
+
+.button-bg  {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(73, 171, 254);
+  background-color: rgba(73, 171, 254, 0);
+  width: 140px;
+  height: 50px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: background-color 0.2s ease-out;
+}
+
+.button-bg:not(:focus):hover {
+  background-color: rgb(73, 171, 254);
+}
+
+.button-bg:focus {
+  outline: none;
+}
+
+.footer {
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(167, 179, 203);
+  font-weight: bold;
+  line-height: 2.692;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 849px) {
+  .square {
+    max-width: 410px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    height: auto;
+    display: block;
+  }
+  .square {
+    position: static;
+    max-width: none;
+  }
+  .bg {
+    flex-direction: column;
+  }
+  .bg-left,
+  .bg-right {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .footer {
+    position: static;
+  }
+}
+
+                                /*  FOOTER  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
