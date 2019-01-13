@@ -1,16 +1,15 @@
 <?php
 
-include_once 'C:\xampp\htdocs\Magebit_test_frontend\Classes\User.php';
 
 class QueryBuilder {
 
   public $pdo;
 
-  public function __construct($pdo) {
-    $this->pdo = $pdo;
+  public function __construct() {
+    $this->pdo = Connection::make();
   }
 
-  public function signUp($data)
+  public function save($data)
   {
     $sql = $this->pdo->prepare("INSERT INTO users (email, password, name)
                                      VALUES (:email, :password, :name)");
@@ -25,17 +24,18 @@ class QueryBuilder {
 
       $pwd = $sql->fetchColumn();
 
-      if(password_verify($_POST['password'], $pwd)) {
-
-      } else {
-          echo 'Wrong email and/or password!';
-          die();
+      if(!password_verify($_POST['password'], $pwd)) {
+        $error =  'Wrong email and/or password!';
+        session_start();
+        $_SESSION['error'] = $error;
+        header('Location: /');
+        exit();
       }
    }
 
     public function selectUser($email)
     {
-      $sql =  $this->pdo->prepare("SELECT name, id FROM users WHERE email = :email");
+      $sql =  $this->pdo->prepare("SELECT name, id, email FROM users WHERE email = :email");
       $sql->bindParam(':email', $email);
       $sql->execute();
 

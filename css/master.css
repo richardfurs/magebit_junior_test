@@ -123,6 +123,11 @@ img {
   background-color: rgb(248, 191, 53);
 }
 
+.error {
+  color: red;
+  text-align: center;
+}
+
 
                                                   /* BG RECTANGLE */
 .square {

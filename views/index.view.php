@@ -19,7 +19,7 @@
                 <div class="line-under"></div>
 
                                               <!-- form-->
-                <form method="POST" action="/sign-up-submit.php" class="form">
+                <form method="POST" action="/create" class="form">
                   <div class="form-group">
                       <label class="form-label">
                         Name
@@ -27,7 +27,7 @@
                       </label>
                       <img class="icon" src="img/ic_user.png">
                       <img class="icon icon-hidden" src="img/ic_user_active.png">
-                      <input class="form-input" type="text" name="name" required/>
+                      <input class="form-input" type="text" name="name" />
                   </div>
 
                   <div class="form-group">
@@ -37,7 +37,7 @@
                       </label>
                       <img class="icon" src="img/ic_mail.png">
                       <img class="icon icon-hidden" src="img/ic_mail_active.png">
-                      <input class="form-input" type="email" name="email"/>
+                      <input class="form-input" type="email" name="email" />
                   </div>
 
                   <div class="form-group">
@@ -47,7 +47,7 @@
                       </label>
                       <img class="icon" src="img/ic_lock.png">
                       <img class="icon icon-hidden" src="img/ic_lock_active.png">
-                      <input class="form-input" type="password" name="password"/>
+                      <input class="form-input" type="password" name="password" />
                   </div>
 
                   <button type="submit" class="button-form">SIGN UP</button>
@@ -62,7 +62,7 @@
                 <div class="line-under"></div>
 
                                               <!-- form-->
-                <form method="POST" action="/login-submit.php" class="form">
+                <form method="POST" action="/login" class="form">
                   <div class="form-group">
                       <label class="form-label">
                         Email
@@ -70,7 +70,7 @@
                       </label>
                       <img class="icon" src="img/ic_mail.png">
                       <img class="icon icon-hidden" src="img/ic_mail_active.png">
-                      <input class="form-input" type="text" name="email"/>
+                      <input class="form-input" type="email" name="email"/>
                   </div>
 
                   <div class="form-group">
@@ -107,6 +107,8 @@
           </div>
         </div>
       </div>
+
+      <h3 class="error"><?= $error ?></h3>
 
     </div>
 

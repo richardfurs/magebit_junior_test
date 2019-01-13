@@ -1,5 +1,15 @@
 <?php
 
-require 'bootstrap.php';
+require 'vendor/autoload.php';
 
-require 'views/index.view.php';
+
+Router::load('routes.php')
+  ->direct(Request::uri(), Request::method());
+
+
+function view($name, $data = [])
+{
+  extract($data);
+
+  return require "views/{$name}.view.php";
+}

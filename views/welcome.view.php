@@ -1,13 +1,3 @@
-<?php
-
-include_once dirname(__DIR__) . '\bootstrap.php';
-session_start();
-$user = $_SESSION['user'];
-
-if(!$user) {
-    header("location: /index.php");
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -18,11 +8,11 @@ if(!$user) {
   <body>
     <h1> Welcome, <?= $user->getName(); ?> </h1>
 
-    <a href="/logout.php"><button>Logout</button></a>
+    <a href="/logout"><button>Logout</button></a>
 
     <h3>Add attributes:</h3>
 
-    <form method="POST" action="/attributes-submit.php">
+    <form method="POST" action="/attributes">
       Attribute name: <input type="text" name="attributes-name" required/>
       Attribute value: <input type="text" name="attributes-value" required/>
       <input type="submit" value="Add"/>
@@ -31,7 +21,7 @@ if(!$user) {
     <h2> Attributes: </h2>
 
     <ul>
-      <?php foreach ($query->getAttributes($user->getId()) as $attribute): ?>
+      <?php foreach ($attributes as $attribute): ?>
         <li> <?= $attribute['attributes_name'] . ': ' . $attribute['attributes_value'] ?> </li>
       <?php endforeach; ?>
     </ul>
